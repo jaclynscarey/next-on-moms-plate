@@ -1,0 +1,98 @@
+[
+  {
+    "id": "f1100000-0000-4000-8000-000000000001",
+    "name": "White",
+    "brand": "Insignia",
+    "material": "PLA",
+    "color": "#f5f5f0",
+    "available": true
+  },
+  {
+    "id": "f1100000-0000-4000-8000-000000000002",
+    "name": "Black",
+    "brand": "Insignia",
+    "material": "PLA",
+    "color": "#242424",
+    "available": true
+  },
+  {
+    "id": "f1100000-0000-4000-8000-000000000003",
+    "name": "Blue",
+    "brand": "Insignia",
+    "material": "PLA",
+    "color": "#2463bd",
+    "available": true
+  },
+  {
+    "id": "f1100000-0000-4000-8000-000000000004",
+    "name": "Silk Gold",
+    "brand": "Insignia",
+    "material": "Silk PLA",
+    "color": "#cba64f",
+    "available": true
+  },
+  {
+    "id": "f1100000-0000-4000-8000-000000000005",
+    "name": "Silk Silver",
+    "brand": "Insignia",
+    "material": "Silk PLA",
+    "color": "#b9bdc5",
+    "available": true
+  },
+  {
+    "id": "f1100000-0000-4000-8000-000000000006",
+    "name": "Glow Rainbow",
+    "brand": "Insignia",
+    "material": "PLA Glow",
+    "color": "#c7d9a2",
+    "available": true
+  },
+  {
+    "id": "f1100000-0000-4000-8000-000000000007",
+    "name": "Cosmic Purple",
+    "brand": "Insignia",
+    "material": "PLA Glitter",
+    "color": "#68468b",
+    "available": true
+  },
+  {
+    "id": "f1100000-0000-4000-8000-000000000008",
+    "name": "Pink",
+    "brand": "Insignia",
+    "material": "PLA",
+    "color": "#ee86b3",
+    "available": true
+  },
+  {
+    "id": "f1100000-0000-4000-8000-000000000009",
+    "name": "Coral Pink",
+    "brand": "Insignia",
+    "material": "Matte PLA",
+    "color": "#e78f89",
+    "available": true
+  },
+  {
+    "id": "f1100000-0000-4000-8000-000000000010",
+    "name": "Red",
+    "brand": "Insignia",
+    "material": "PLA",
+    "color": "#ce343c",
+    "available": true
+  },
+  {
+    "id": "f1100000-0000-4000-8000-000000000011",
+    "name": "Galaxy Green",
+    "brand": "Insignia",
+    "material": "PLA Glitter",
+    "color": "#386c54",
+    "available": true
+  },
+  {
+    "id": "f1100000-0000-4000-8000-000000000012",
+    "name": "Jungle Green",
+    "brand": "Insignia",
+    "material": "PLA",
+    "color": "#426b37",
+    "available": true
+  }
+]

@@ -13,13 +13,13 @@ npm ci
 npm run dev
 ```
 
-Open http://localhost:3000. Without Supabase settings the app shows an explicitly labeled **in-memory demo**. Demo orders and filament colors are examples; no mail is sent, images are not saved, and refresh resets changes. Demo controls simulate the admin account. Do not use demo mode to collect real requests.
+Open http://localhost:3000. Without Supabase settings the app shows an explicitly labeled **in-memory demo**. Demo orders are examples; the filament library contains the 12 owned Insignia filaments with approximate color swatches; no mail is sent, images are not saved, and refresh resets changes. Demo controls simulate the admin account. Do not use demo mode to collect real requests.
 
 For live mode copy `.env.example` to `.env.local` and configure your own values. Never commit `.env.local` or real family data. The service-role key and email keys are server-only.
 
 ## Supabase setup
 
-1. Create a Supabase project. Run `supabase/migrations/001_initial.sql` once in its SQL editor.
+1. Create a Supabase project. Run `supabase/migrations/001_initial.sql` once in its SQL editor, then run `supabase/seed.sql` to load the 12 owned Insignia filaments. The seed is idempotent and preserves availability changes.
 2. **Disable public signup** in Authentication settings. Configure the site URL and redirect allowlist for `http://localhost:3000/auth/callback` while developing and the production callback when deploying.
 3. Create the first admin user in the Authentication dashboard. The migration allows this initial user to exist without a profile. In the SQL editor insert that user's actual UUID into `public.profiles` with role `admin` and a display name. A unique index permits only one admin. This is an operator-only step; never ship a client action for it.
 4. Set up custom SMTP for Supabase authentication mail, for example using Resend's SMTP credentials. Supabase's default mail service is restricted and is not sufficient for family invitations. This SMTP setting is separate from the app's `RESEND_API_KEY`.

@@ -331,8 +331,8 @@ export default function Dashboard({
         </header>
         {demo && (
           <div className="demo-banner">
-            Interactive demo · Sample orders and filaments. Changes last until
-            you refresh. No emails are sent.
+            Interactive demo · Sample orders, actual filament library. Changes
+            last until you refresh. No emails are sent.
           </div>
         )}
         <main className="main">

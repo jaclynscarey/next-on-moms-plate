@@ -32,7 +32,7 @@ test("family member requests a personalized print, admin approves and completes 
   await page.getByLabel("Who’s it for?").selectOption("Sofia");
   await page
     .getByRole("combobox", { name: "Filament", exact: true })
-    .selectOption("pink");
+    .selectOption({ label: "Pink · PLA" });
   await page
     .getByLabel("Personalization & other details")
     .fill("Sofia with a heart");
@@ -65,19 +65,21 @@ test("family member requests a personalized print, admin approves and completes 
   );
   await expect(page.getByLabel("How many copies?")).toHaveValue("2");
 });
-test("queue, special filament, comments and phone layout", async ({ page }) => {
+test("queue, owned filament, comments and phone layout", async ({ page }) => {
   await page.goto("/");
   await page.getByRole("button", { name: /Glow stars/ }).click();
   await expect(
-    page.getByText("Waiting for special filament", { exact: true }),
+    page.getByText("Waiting for model clarification", { exact: true }),
   ).toBeVisible();
   await page
     .getByRole("button", { name: "Ready to print", exact: true })
     .click();
-  await page.getByLabel("Add a comment").fill("The new filament is here.");
+  await page
+    .getByLabel("Add a comment")
+    .fill("The model details are confirmed.");
   await page.getByRole("button", { name: "Post comment" }).click();
   await expect(
-    page.getByText("The new filament is here.", { exact: true }),
+    page.getByText("The model details are confirmed.", { exact: true }),
   ).toBeVisible();
   expect(
     await page.evaluate(

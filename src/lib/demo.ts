@@ -1,46 +1,6 @@
 import type { PrintOrder, Filament } from "./orders";
-export const demoFilaments: Filament[] = [
-  {
-    id: "pink",
-    name: "Rose pink",
-    brand: "Sample",
-    material: "PLA",
-    color: "#e7a9b9",
-    available: true,
-  },
-  {
-    id: "white",
-    name: "Cloud white",
-    brand: "Sample",
-    material: "PLA",
-    color: "#eee9e0",
-    available: true,
-  },
-  {
-    id: "blue",
-    name: "Ocean blue",
-    brand: "Sample",
-    material: "PLA",
-    color: "#6ca6c8",
-    available: true,
-  },
-  {
-    id: "green",
-    name: "Sage green",
-    brand: "Sample",
-    material: "PLA",
-    color: "#9ba987",
-    available: true,
-  },
-  {
-    id: "purple",
-    name: "Lilac",
-    brand: "Sample",
-    material: "PLA",
-    color: "#ac92ca",
-    available: false,
-  },
-];
+import purchasedFilaments from "./filaments.json";
+export const demoFilaments: Filament[] = purchasedFilaments;
 export const demoOrders: PrintOrder[] = [
   {
     id: "dragon",
@@ -50,8 +10,16 @@ export const demoOrders: PrintOrder[] = [
     recipient: "Wyatt",
     notes: "A blue body with white eyes, please.",
     parts: [
-      { name: "Body", filamentId: "blue", special: "" },
-      { name: "Eyes", filamentId: "white", special: "" },
+      {
+        name: "Body",
+        filamentId: "f1100000-0000-4000-8000-000000000003",
+        special: "",
+      },
+      {
+        name: "Eyes",
+        filamentId: "f1100000-0000-4000-8000-000000000001",
+        special: "",
+      },
     ],
     status: "printing",
     submittedAt: "2026-11-01T08:00:00Z",
@@ -70,8 +38,16 @@ export const demoOrders: PrintOrder[] = [
     recipient: "Sofia",
     notes: "Sofia with a small heart. The standing version, please.",
     parts: [
-      { name: "Letters", filamentId: "pink", special: "" },
-      { name: "Base", filamentId: "white", special: "" },
+      {
+        name: "Letters",
+        filamentId: "f1100000-0000-4000-8000-000000000008",
+        special: "",
+      },
+      {
+        name: "Base",
+        filamentId: "f1100000-0000-4000-8000-000000000001",
+        special: "",
+      },
     ],
     status: "queued",
     submittedAt: "2026-11-02T08:00:00Z",
@@ -89,13 +65,19 @@ export const demoOrders: PrintOrder[] = [
     quantity: 2,
     recipient: "Mia",
     notes: "For my bedroom ceiling.",
-    parts: [{ name: "Stars", filamentId: "", special: "Glow-in-the-dark PLA" }],
+    parts: [
+      {
+        name: "Stars",
+        filamentId: "f1100000-0000-4000-8000-000000000006",
+        special: "",
+      },
+    ],
     status: "on_hold",
     submittedAt: "2026-11-01T09:00:00Z",
     submitterId: "demo",
     submitterName: "Sample member",
     version: 1,
-    holdReason: "Waiting for special filament",
+    holdReason: "Waiting for model clarification",
     comments: [],
     images: [],
   },
@@ -105,8 +87,14 @@ export const demoOrders: PrintOrder[] = [
     modelUrl: "https://makerworld.com/en/models/126",
     quantity: 1,
     recipient: "Sam",
-    notes: "Sage green. The small version.",
-    parts: [{ name: "Pot", filamentId: "green", special: "" }],
+    notes: "Jungle green. The small version.",
+    parts: [
+      {
+        name: "Pot",
+        filamentId: "f1100000-0000-4000-8000-000000000012",
+        special: "",
+      },
+    ],
     status: "pending",
     submittedAt: "2026-11-03T08:00:00Z",
     submitterId: "demo",
@@ -123,7 +111,13 @@ export const demoOrders: PrintOrder[] = [
     quantity: 4,
     recipient: "Jacky",
     notes: "Two blue and two pink.",
-    parts: [{ name: "Clips", filamentId: "blue", special: "" }],
+    parts: [
+      {
+        name: "Clips",
+        filamentId: "f1100000-0000-4000-8000-000000000003",
+        special: "",
+      },
+    ],
     status: "completed",
     submittedAt: "2026-10-20T08:00:00Z",
     submitterId: "demo",
